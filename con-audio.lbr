@@ -57,9 +57,9 @@
 <library>
 <packages>
 <package name="AC3MAH">
-<pad name="P$1" x="3.81" y="-17.78" drill="1.6002"/>
-<pad name="P$2" x="-3.81" y="-17.78" drill="1.6002"/>
-<pad name="P$3" x="0" y="-17.78" drill="1.1938"/>
+<pad name="1" x="3.81" y="-17.78" drill="1.6002"/>
+<pad name="2" x="-3.81" y="-17.78" drill="1.6002"/>
+<pad name="3" x="0" y="-17.78" drill="1.2"/>
 <hole x="3.81" y="-8.89" drill="1.6002"/>
 <hole x="-3.81" y="-3.81" drill="1.6002"/>
 <wire x1="-10.9982" y1="0" x2="-10.9982" y2="2.6924" width="0.127" layer="51"/>
@@ -75,6 +75,32 @@
 <circle x="3.81" y="-8.89" radius="1.778" width="0" layer="41"/>
 <circle x="-3.81" y="-3.81" radius="1.778" width="0" layer="42"/>
 <circle x="3.81" y="-8.89" radius="1.778" width="0" layer="42"/>
+<pad name="G" x="0" y="-12.7" drill="1.2"/>
+</package>
+<package name="MHD">
+<pad name="1" x="0" y="-5.7" drill="1.4"/>
+<pad name="4" x="0" y="5.7" drill="1.4"/>
+<pad name="10" x="-3.25" y="6.25" drill="1.4"/>
+<pad name="7" x="-3.25" y="-6.25" drill="1.4"/>
+<pad name="6" x="-12.6" y="5.7" drill="1.4" rot="R90"/>
+<pad name="12" x="-15.95" y="6.25" drill="1.4"/>
+<pad name="3" x="-12.6" y="-5.7" drill="1.4"/>
+<pad name="9" x="-15.95" y="-6.25" drill="1.4"/>
+<hole x="-17.33" y="0" drill="2.1"/>
+<wire x1="4.25" y1="8" x2="-20.15" y2="8" width="0.127" layer="21"/>
+<wire x1="-20.15" y1="8" x2="-20.15" y2="-8" width="0.127" layer="21"/>
+<wire x1="-20.15" y1="-8" x2="4.25" y2="-8" width="0.127" layer="21"/>
+<wire x1="4.25" y1="-8" x2="4.25" y2="-5.7" width="0.127" layer="21"/>
+<wire x1="4.25" y1="-5.7" x2="4.25" y2="5.7" width="0.127" layer="21"/>
+<wire x1="4.25" y1="5.7" x2="4.25" y2="8" width="0.127" layer="21"/>
+<wire x1="4.25" y1="5.7" x2="13.35" y2="5.7" width="0.127" layer="21"/>
+<wire x1="13.35" y1="5.7" x2="13.35" y2="-5.7" width="0.127" layer="21"/>
+<wire x1="13.35" y1="-5.7" x2="4.25" y2="-5.7" width="0.127" layer="21"/>
+<wire x1="4.25" y1="-5.7" x2="4.25" y2="5.7" width="0.127" layer="21"/>
+<circle x="-17.33" y="0" radius="1.6" width="0" layer="41"/>
+<circle x="-17.33" y="0" radius="1.6" width="0" layer="42"/>
+<rectangle x1="-20.15" y1="-8" x2="4.25" y2="8" layer="39"/>
+<rectangle x1="-20.15" y1="-8" x2="4.25" y2="8" layer="40"/>
 </package>
 </packages>
 <symbols>
@@ -160,25 +186,108 @@
 <wire x1="-5.08" y1="-4.318" x2="-3.556" y2="-3.302" width="0.1524" layer="94"/>
 <circle x="-5.08" y="-2.54" radius="0.254" width="0" layer="94"/>
 </symbol>
+<symbol name="1/4_JACK_DUAL_MONO">
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="10.16" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="10.16" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="10.16" x2="-1.27" y2="8.89" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="8.89" x2="0" y2="10.16" width="0.254" layer="94"/>
+<wire x1="0" y1="10.16" x2="2.54" y2="10.16" width="0.254" layer="94"/>
+<wire x1="2.54" y1="10.16" x2="5.08" y2="10.16" width="0.254" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="2.54" y="10.16"/>
+<vertex x="2.032" y="9.652"/>
+<vertex x="3.048" y="9.652"/>
+</polygon>
+<wire x1="2.54" y1="9.652" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-10.16" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-10.16" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-10.16" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-1.27" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-3.81" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="2.54" y="-2.54"/>
+<vertex x="2.032" y="-3.048"/>
+<vertex x="3.048" y="-3.048"/>
+</polygon>
+<wire x1="2.54" y1="-3.048" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="0" y="-10.16"/>
+<vertex x="0.508" y="-9.652"/>
+<vertex x="-0.508" y="-9.652"/>
+</polygon>
+<polygon width="0.254" layer="94">
+<vertex x="0" y="2.54"/>
+<vertex x="0.508" y="3.048"/>
+<vertex x="-0.508" y="3.048"/>
+</polygon>
+<wire x1="2.54" y1="-3.048" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-9.652" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="3.048" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<pin name="4" x="7.62" y="-10.16" length="point"/>
+<pin name="1" x="7.62" y="-7.62" length="point"/>
+<pin name="3" x="7.62" y="-5.08" length="point"/>
+<pin name="6" x="7.62" y="-2.54" length="point"/>
+<pin name="10" x="7.62" y="2.54" length="point"/>
+<pin name="7" x="7.62" y="5.08" length="point"/>
+<pin name="9" x="7.62" y="7.62" length="point"/>
+<pin name="12" x="7.62" y="10.16" length="point"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="AC3M">
 <description>Amphenol Male XLR 3 Pin Connector&lt;/p&gt;
 &lt;p&gt;Shield not connected</description>
 <gates>
-<gate name="G$1" symbol="XLR_MALE_3PIN_NO_SHIELD" x="0" y="0"/>
+<gate name="G$1" symbol="XLR_MALE_3PIN_W_SHIELD" x="0" y="0"/>
 </gates>
 <devices>
-<device name="AH" package="AC3MAH">
+<device name="" package="AC3MAH">
 <connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-<connect gate="G$1" pin="2" pad="P$2"/>
-<connect gate="G$1" pin="3" pad="P$3"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="G" pad="G"/>
 </connects>
 <technologies>
-<technology name="">
-<attribute name="FARNELL" value="1835527" constant="no"/>
-</technology>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ACJM">
+<description>ACJM-MHD dual mono 14/" jack plug</description>
+<gates>
+<gate name="G$1" symbol="1/4_JACK_DUAL_MONO" x="0" y="0"/>
+</gates>
+<devices>
+<device name="MHD" package="MHD">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="12" pad="12"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
